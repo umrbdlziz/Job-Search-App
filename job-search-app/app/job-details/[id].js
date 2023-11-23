@@ -15,7 +15,7 @@ const JobDetails = () => {
     const router = useRouter();
 
     const [refreshing, setRefreshing] = useState(false);
-    const [activeTab, setActiveTab] = useState(tab[0]);
+    const [activeTab, setActiveTab] = useState(tabs[0]);
 
     const onRefresh = () => {}
 
