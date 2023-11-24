@@ -8,19 +8,33 @@ import { Company, JobAbout, JobFooter, JobTabs, ScreenHeaderBtn, Specifics } fro
 import { COLORS, icons, SIZES } from "../../constants";
 import useFetch from "../../hook/useFetch";
 
-const tabs = ["About", "Qualifications", "Respondibilities"];
+const tabs = ["About", "Qualifications", "Responsibilities"];
 
 const JobDetails = () => {
     const params = useSearchParams();
     const router = useRouter();
+
+    const { data, isLoading, error, refetch } = useFetch('job-details', { job_id: params.id
+    })
 
     const [refreshing, setRefreshing] = useState(false);
     const [activeTab, setActiveTab] = useState(tabs[0]);
 
     const onRefresh = () => {}
 
-    const { data, isLoading, error, refetch } = useFetch('job-details', { job_id: params.id
-    })
+    const displayTabContent = () => {
+        switch (activeTab) {
+            case "Qualifications":
+                return <Specifics 
+                    title="Qualifications"
+                    points={data[0].job_highlights?.qualifications ?? ['N/A']}
+                />
+            case "About":
+            case "Responsibilities":
+            default:
+                break;
+        }
+    };
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite}}>
@@ -71,6 +85,8 @@ const JobDetails = () => {
                             activeTab={activeTab}
                             setActiveTab={setActiveTab}
                         />
+
+                        {displayTabContent()}
                     </View>
                 )}
             </ScrollView>
