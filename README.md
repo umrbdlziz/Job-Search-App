@@ -9,8 +9,8 @@ A job search application like linked using Reach Native and Expo
 - develop visually appealing UI/UX designs
 - fetch data from an external API and integrate it
 - implement search & pagination functionality
-- create custom API data fetching hooks
-- write clean, organized, and maintainable code with proper architecture
+- a custom API data fetching hooks
+- a clean, organized, and maintainable code with proper architecture
 - follow the best practices for React Native development
 
 
@@ -31,19 +31,19 @@ A job search application like linked using Reach Native and Expo
 Clone the project
 
 ```bash
-  git clone https://link-to-project
-```
-
-Create new app
-
-```bash
-  npx create-expo-app@latest --template tabs@49
+  git clone https://github.com/umrbdlziz/Job-Search-App.git
 ```
 
 Go to the project directory
 
 ```bash
   cd job-search-app
+```
+
+Install dependencies
+
+```bash
+  npm install
 ```
 
 Start the server
@@ -53,7 +53,7 @@ Start the server
 ```
 
 
-## Authors
+## Acknowledgements
 
 - [@adrianhajdin](https://github.com/adrianhajdin/project_react_native_jobs)
 
