@@ -1,7 +1,7 @@
 # Job-Search-App
 A job search application like linked using Reach Native and Expo
 
-
+https://github.com/umrbdlziz/Job-Search-App/assets/117342940/ca455259-ed30-46fa-a702-64e83bf96f42
 
 
 ## Features
